@@ -11,7 +11,7 @@ class Mutations::SiginIn < Mutations::BaseMutation
     raise GraphQL::ExecutionError, "Wrong password" unless user.authenticate(password)
 
     { 
-      token: Api::AuthenticationTokenService.call(user.id).result,
+      token: Api::AuthenticationTokenService.call(user.id),
       user: user
     }
 

@@ -10,8 +10,9 @@ module Types
 
     field :user, Types::UserType, null: false
     def user
-      check_login
-      context[:current_user]
+      check_authentication
+
+      current_user
     end
   end
 end

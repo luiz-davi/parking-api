@@ -11,9 +11,12 @@ module Types
     field :create_post, mutation: Mutations::CreatePost
     field :update_post, mutation: Mutations::UpdatePost
     field :disable_post, mutation: Mutations::DisablePost
+    field :restore_post, mutation: Mutations::RestorePost
 
     #comments
     field :create_comment, mutation: Mutations::CreateComment
     field :update_comment, mutation: Mutations::UpdateComment
+    field :delete_comment, mutation: Mutations::DeleteComment
+
   end
 end

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
       id = Api::AuthenticationTokenService.decode(token)
       User.find(id)
 
-    rescue ActiveRecord::RecordNotFound
-      raise GraphQL::ExecutionError, "aaaaaaaaaaaaaaaaa"
+    rescue ActiveRecord::RecordNotFound => e
+      raise GraphQL::ExecutionError, e.message
     end
 end

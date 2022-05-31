@@ -1,5 +1,5 @@
 module Mutations
-  class DesableUser < Mutations::BaseMutation
+  class DisableUser < Mutations::BaseMutation
 
     field :result, Boolean, null: false
 

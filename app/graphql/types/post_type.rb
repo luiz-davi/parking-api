@@ -6,8 +6,14 @@ module Types
     field :topic, String
     field :enabled, Boolean
     field :user, Types::UserType
+    field :comments, [Types::CommentType]
+    
     def user
       object.user
+    end
+    
+    def comments
+      object.comments
     end
   end
 end
